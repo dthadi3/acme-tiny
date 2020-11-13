@@ -16,6 +16,34 @@ matrix:
       python: "3.7"
     - dist: xenial
       python: "nightly"
+#Added power support jobs
+    - dist: xenial
+      arch: ppc64le
+      python: "2.7"
+    - dist: trusty
+      arch: ppc64le
+      python: "3.3"
+    - dist: xenial
+      arch: ppc64le
+      python: "3.4"
+    - dist: xenial
+      arch: ppc64le
+      python: "3.5"
+    - dist: xenial
+      arch: ppc64le
+      python: "3.6"
+    - dist: xenial
+      arch: ppc64le
+      python: "3.7"
+    - dist: xenial
+      arch: ppc64le
+      python: "nightly"
+# Disable version 3.3
+jobs:
+  exclude:  
+    - dist: trusty
+      arch: ppc64le
+      python: "3.3"
 before_install:
   - sudo apt-get install fuse
   - sudo chmod a+r /etc/fuse.conf
